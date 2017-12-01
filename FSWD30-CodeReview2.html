@@ -10,39 +10,54 @@
 <body>
 
 
-<span id="amsterdam"></span>  <!--ausgabe durchschnittspreis-->
-<span id="london"></span>	  <!--ausgabe durchschnittspreis-->
+<span id="amsterdamPrice"></span>  <!--ausgabe durchschnittspreis-->
+<span id="londonPrice"></span>	  <!--ausgabe durchschnittspreis-->
 <span id="cityName1"></span>	  <!--ausgabe Amsterdam-->
 <span id="cityName2"></span>	  <!--ausgabe London-->
 <span id="country1"></span>	  <!--ausgabe Netherlands-->
 <span id="country2"></span>	  <!--ausgabe United Kingdom-->
-<span id="averagePrice"></span>	  <!--ausgabe Average Price?????????-->
 
 
 
 
 <script>
-function averageAmsterdam(price1, price2, price3, price4) {
-	var sum = price1 + price2 + price3 + price4;
-	var resultAmsterdam = sum / 4;
-	return resultAmsterdam;
-}
-document.getElementById("amsterdam").innerHTML=averageAmsterdam(1500, 500, 1800, 700);
-
-
-function averageLondon(price1, price2, price3, price4) {
-	var sum = price1 + price2 + price3 + price4;
-	var resultLondon = sum / 4;
-	return resultLondon;
-}
-document.getElementById("london").innerHTML=averageLondon(2500, 1500, 1000, 900);
-
 
 var cityName1 = "Amsterdam";
 var cityName2 = "London";
 var country1 = "Netherlands";
 var country2 = "United Kingdom";
-var averagePrice = "Average price";    //ausgabe Average Price?????????  wahrscheinlich unnötig
+
+document.getElementById("cityName1").innerHTML=cityName1;
+document.getElementById("cityName2").innerHTML=cityName2;
+document.getElementById("country1").innerHTML=country1;
+document.getElementById("country2").innerHTML=country2;
+
+//----------------------------------------------------------------
+
+
+function averageAmsterdam(price1, price2, price3, price4) {
+	var sum = price1 + price2 + price3 + price4;
+	var resultAmsterdam = sum / 4;   //average price
+	return resultAmsterdam;
+}
+document.getElementById("amsterdamPrice").innerHTML=averageAmsterdam(1500, 500, 1800, 700);
+
+
+function averageLondon(price1, price2, price3, price4) {
+	var sum = price1 + price2 + price3 + price4;
+	var resultLondon = sum / 4;  //average price
+	return resultLondon;
+}
+document.getElementById("londonPrice").innerHTML=averageLondon(2500, 1500, 1000, 900);
+
+/*var resultAmsterdam;
+var resultLondon;
+
+document.write(resultAmsterdam);
+document.getElementById("amsterdamPrice").innerHTML=resultAmsterdam;
+
+document.write(`<br>`)
+document.write(`<br>`)*/
 
 
 
