@@ -9,15 +9,58 @@
 </head>
 <body>
 
+<div id="container">
 
-<span id="amsterdamPrice"></span>  <!--ausgabe durchschnittspreis-->
-<span id="londonPrice"></span>	  <!--ausgabe durchschnittspreis-->
-<span id="cityName1"></span>	  <!--ausgabe Amsterdam-->
-<span id="cityName2"></span>	  <!--ausgabe London-->
-<span id="country1"></span>	  <!--ausgabe Netherlands-->
-<span id="country2"></span>	  <!--ausgabe United Kingdom-->
+      <header>
+            <span id="logo"><img src="img/logo.png" alt="logo" width="18px" height="18px"></span>
+            <h2>Price Comparison</h2>
+        </header>
+
+      
 
 
+
+      <div class="flexcontainer">
+    
+          <div class="city"><img src="img/amsterdam.jpg" alt="amsterdam" height="200" width="249">
+
+            <div class="details">
+				<span class="cityname" id="cityName1"></span>     <!--ausgabe Amsterdam-->
+				<span class="price" id="amsterdamPrice"></span>   <!--ausgabe durchschnittspreis-->
+<br>
+
+				<span class="countryname" id="country1"></span>	  <!--ausgabe Netherlands-->
+				<span class="average">Average price</span>
+
+            </div>
+          </div>
+
+ 
+         <div class="city"><img src="img/london.jpg" alt="london" height="200" width="249">
+
+            <div class="details">
+				<span class="cityname" id="cityName2"></span>       <!--ausgabe London-->
+				<span class="price" id="londonPrice"></span>        <!--ausgabe durchschnittspreis-->
+<br>
+
+				<span class="countryname" id="country2"></span>     <!--ausgabe United Kingdom-->
+				<span class="average">Average price</span>
+
+            </div>
+
+          </div>
+
+
+      </div>
+<br>
+      <span class="info"><strong>Amsterdam</strong> will be more affordable than <strong>London</strong> for the New Year's celebration.</span>
+
+      <div class="info2">Difference in price<br><br><br>
+		<span class="result">350 €</span>
+<br><br><br><br>
+	</div>
+
+</div>
 
 
 <script>
@@ -36,28 +79,26 @@ document.getElementById("country2").innerHTML=country2;
 
 
 function averageAmsterdam(price1, price2, price3, price4) {
-	var sum = price1 + price2 + price3 + price4;
-	var resultAmsterdam = sum / 4;   //average price
-	return resultAmsterdam;
+	var resultAmsterdam = (price1 + price2 + price3 + price4)/4;
+	
+	return resultAmsterdam;	
+	
 }
 document.getElementById("amsterdamPrice").innerHTML=averageAmsterdam(1500, 500, 1800, 700);
 
 
+
+
+
 function averageLondon(price1, price2, price3, price4) {
-	var sum = price1 + price2 + price3 + price4;
-	var resultLondon = sum / 4;  //average price
+	var resultLondon = (price1 + price2 + price3 + price4)/4;
+	
 	return resultLondon;
 }
 document.getElementById("londonPrice").innerHTML=averageLondon(2500, 1500, 1000, 900);
 
-/*var resultAmsterdam;
-var resultLondon;
 
-document.write(resultAmsterdam);
-document.getElementById("amsterdamPrice").innerHTML=resultAmsterdam;
-
-document.write(`<br>`)
-document.write(`<br>`)*/
+//---------------------------------------------------------------
 
 
 
